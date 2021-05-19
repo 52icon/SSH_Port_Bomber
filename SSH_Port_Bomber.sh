@@ -1,5 +1,5 @@
 #!/bin/bash
-ips=108.61.13.174 
+ips=XXX.XXX.XXX.XXX
 
 for((Q=1;Q<=65535;Q++)); 
 do   
