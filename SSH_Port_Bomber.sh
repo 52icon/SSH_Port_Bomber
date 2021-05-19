@@ -6,7 +6,7 @@ do
 for(( i=0;i<${#ips[*]};i++))
 do
     expect <<EOF                       
-    set timeout 3     #超时时间，如果延迟较大，建议调高
+    set timeout 3    
     spawn ssh -p${Q}  root@${ips[i]}
     expect {
         "*yes/no" { send "no\r" }
@@ -15,3 +15,6 @@ do
 EOF
 done
 done 
+
+
+#如果延迟较高，建议将set timeout 3 调高
